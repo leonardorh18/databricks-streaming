@@ -4,7 +4,7 @@ draw.io: https://drive.google.com/file/d/1xQAKWxL4OZRzpa9AY5poGXJZJGTIm5d3/view?
 dataframe usado no notebook como exemplo:
 https://www.kaggle.com/datasets/gabrielramos87/an-online-shop-business
 
-Considerando que o squad de produtos ainda não tem uma solução para transacionar os dados de pedidos para dentro do lake, segue uma sugestão:
+Considerando que o squad de produtos ainda não tem uma solução para transacionar os dados de pedidos para dentro do lake, segue uma sugestão que pode atender o case para dados em tempo real. Pode necessário adaptar o desenho a partir da real necessidade, e também dos recursos disponíves para desenvolvimento ou de recursos ja existentes que podem ser reaproveitados.
 
 Solução para streaming databricks:
 ![Solucao](images/solucao.drawio.png)
