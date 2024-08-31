@@ -1,0 +1,97 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36" version="24.7.8">
+  <diagram id="WI9T0HZ2pTsCkuznbFz-" name="Page-1">
+    <mxGraphModel grid="1" page="1" gridSize="15" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="5BrfsdH3SS1tADsjfD-9-21" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="190" y="110" width="810" height="440" as="geometry" />
+        </mxCell>
+        <mxCell id="QH-cwWBiQ59XKDoKRFCK-5" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="620" y="260" width="370" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="5BrfsdH3SS1tADsjfD-9-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#7EA6E0;" edge="1" parent="1" source="5BrfsdH3SS1tADsjfD-9-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="490" y="210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5BrfsdH3SS1tADsjfD-9-1" value="Azure Event Hub with Capture enable" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/iot/Event_Hubs.svg;" vertex="1" parent="1">
+          <mxGeometry x="270" y="180" width="67" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5BrfsdH3SS1tADsjfD-9-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="5BrfsdH3SS1tADsjfD-9-6">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="531.4000000000001" y="260" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="531" y="454" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="QH-cwWBiQ59XKDoKRFCK-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="5BrfsdH3SS1tADsjfD-9-6" target="5BrfsdH3SS1tADsjfD-9-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5BrfsdH3SS1tADsjfD-9-6" value="Databricks DLT" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/analytics/Azure_Databricks.svg;" vertex="1" parent="1">
+          <mxGeometry x="630" y="420" width="62.8" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="5BrfsdH3SS1tADsjfD-9-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="5BrfsdH3SS1tADsjfD-9-8">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="260" y="212" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5BrfsdH3SS1tADsjfD-9-8" value="CDC events from source" style="aspect=fixed;sketch=0;html=1;dashed=0;whitespace=wrap;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#2875E2;strokeColor=#ffffff;points=[[0.005,0.63,0],[0.1,0.2,0],[0.9,0.2,0],[0.5,0,0],[0.995,0.63,0],[0.72,0.99,0],[0.5,1,0],[0.28,0.99,0]];shape=mxgraph.kubernetes.icon2;kubernetesLabel=1;prIcon=api" vertex="1" parent="1">
+          <mxGeometry x="10" y="180" width="70" height="67.2" as="geometry" />
+        </mxCell>
+        <mxCell id="QH-cwWBiQ59XKDoKRFCK-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="5BrfsdH3SS1tADsjfD-9-11" target="5BrfsdH3SS1tADsjfD-9-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5BrfsdH3SS1tADsjfD-9-11" value="bronze" style="shape=datastore;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="690" y="290" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="QH-cwWBiQ59XKDoKRFCK-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="5BrfsdH3SS1tADsjfD-9-15" target="5BrfsdH3SS1tADsjfD-9-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5BrfsdH3SS1tADsjfD-9-15" value="silver" style="shape=datastore;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="780" y="290" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5BrfsdH3SS1tADsjfD-9-22" value="Ambiente Azure" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="585" y="70" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="5BrfsdH3SS1tADsjfD-9-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="5BrfsdH3SS1tADsjfD-9-24" target="5BrfsdH3SS1tADsjfD-9-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5BrfsdH3SS1tADsjfD-9-24" value="Power BI" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/analytics/Power_BI_Embedded.svg;" vertex="1" parent="1">
+          <mxGeometry x="1070" y="286" width="51" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="5BrfsdH3SS1tADsjfD-9-26" value="&lt;div style=&quot;text-align: justify;&quot;&gt;A API publica os dados de pedidos no Event Hub. Por exemplo, a publicação&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&amp;nbsp;pode ocorrer no momento em que um pedido é inserido ou atualizado,&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;utilizando um Trigger, ou&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;através de uma ferramenta de&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;captura de dados de mudança (CDC).&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Dependendo da fonte de dados,&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;pode já existir&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;uma funcionalidade de CDC nativa.&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Caso contrário, será necessário&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;utilizar o Debezium para conectar a fonte de dados ao Event Hub.&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-270" y="290" width="470" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="5BrfsdH3SS1tADsjfD-9-27" value="&lt;div style=&quot;text-align: justify;&quot;&gt;O Event Hub recebe as publicações (dados dos pedidos) e,&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;com a funcionalidade de&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;Capture habilitada, é possível gravar&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;um arquivo com os dados dos pedidos no&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;Storage a cada X&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;minutos ou após acumular X MB de dados.&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Por padrão, os arquivos são salvos no formato&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;Avro, mas é possível configurar outros formatos de escrita.&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="190" y="280" width="350" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="5BrfsdH3SS1tADsjfD-9-28" value="Ingestão" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="380" y="160" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="5BrfsdH3SS1tADsjfD-9-30" value="Storage" style="image;sketch=0;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/mscae/BlobBlock.svg;" vertex="1" parent="1">
+          <mxGeometry x="510" y="190" width="50" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="QH-cwWBiQ59XKDoKRFCK-7" value="Databricks Workspace" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="760" y="220" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="QH-cwWBiQ59XKDoKRFCK-8" value="&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;O&lt;b&gt;&amp;nbsp;&lt;/b&gt;DLT é ideal para cenários de processamento contínuo e incremental. Ele permite que você capture mudanças nos dados (inserções e atualizações) em tempo real e as processe de forma eficiente.&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="590" y="560" width="230" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="QH-cwWBiQ59XKDoKRFCK-10" value="Source" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/database.svg;" vertex="1" parent="1">
+          <mxGeometry x="-140" y="203" width="50" height="37" as="geometry" />
+        </mxCell>
+        <mxCell id="QH-cwWBiQ59XKDoKRFCK-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.005;entryY=0.63;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="QH-cwWBiQ59XKDoKRFCK-10" target="5BrfsdH3SS1tADsjfD-9-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="QH-cwWBiQ59XKDoKRFCK-12" value="DLT Processamento contínuo: spark structured streaming" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="720" y="458" width="187.2" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="5BrfsdH3SS1tADsjfD-9-19" value="gold" style="shape=datastore;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="870" y="290" width="60" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

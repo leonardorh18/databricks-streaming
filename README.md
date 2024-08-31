@@ -1,6 +1,8 @@
 # databricks-streaming
 draw.io: https://drive.google.com/file/d/1xQAKWxL4OZRzpa9AY5poGXJZJGTIm5d3/view?usp=sharing
 
+Considerando que o squad de produtos ainda não tem uma solução para transacionar os dados de pedidos para dentro do lake, segue uma sugestão:
+
 Solução para streaming databricks:
 ![Solucao](images/solucao.drawio.png)
 
@@ -13,7 +15,7 @@ A arquitetura descrita é projetada para capturar, processar e armazenar dados d
 ## 1. Captura de Dados (Ingestão)
 
 - **Fonte de Dados (Source)**: A solução inicia com uma fonte de dados onde os pedidos são gerados. Estes dados são capturados usando eventos de CDC (Change Data Capture) para detectar mudanças, como inserções ou atualizações de pedidos.
-- **CDC**: Uma API é utilizada para publicar os eventos de dados de pedidos diretamente no Azure Event Hub, permitindo que mudanças nos dados sejam rapidamente transmitidas para o sistema de processamento. A publicação no Event Hub pode ocorrer automaticamente quando um pedido é inserido ou atualizado, utilizando triggers de banco de dados ou uma ferramenta de CDC. Caso a fonte de dados tenha suporte nativo para CDC, ele pode ser usado diretamente; caso contrário, uma ferramenta como o Debezium pode ser integrada para capturar essas mudanças.
+- **CDC**: Uma API é utilizada para publicar os eventos de dados de pedidos diretamente no Azure Event Hub em um **tópico específico**, permitindo que mudanças nos dados sejam rapidamente transmitidas para o sistema de processamento. A publicação no Event Hub pode ocorrer automaticamente quando um pedido é inserido ou atualizado, utilizando triggers de banco de dados ou uma ferramenta de CDC. Caso a fonte de dados tenha suporte nativo para CDC, ele pode ser usado diretamente; caso contrário, uma ferramenta como o Debezium pode ser integrada para capturar essas mudanças.
 
 ## 2. Processamento de Dados (Event Hub e Storage)
 
