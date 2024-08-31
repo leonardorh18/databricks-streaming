@@ -1,6 +1,9 @@
 # databricks-streaming
 draw.io: https://drive.google.com/file/d/1xQAKWxL4OZRzpa9AY5poGXJZJGTIm5d3/view?usp=sharing
 
+dataframe usado no notebook como exemplo:
+https://www.kaggle.com/datasets/gabrielramos87/an-online-shop-business
+
 Considerando que o squad de produtos ainda não tem uma solução para transacionar os dados de pedidos para dentro do lake, segue uma sugestão:
 
 Solução para streaming databricks:
