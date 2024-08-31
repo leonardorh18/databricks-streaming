@@ -30,14 +30,14 @@ https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-capture-overview
 
 ## 3. Processamento e Transformação (Databricks Workspace)
 
-- **Databricks DLT (Delta Live Tables)**: No Databricks, o Delta Live Tables é utilizado para o processamento contínuo dos dados armazenados. O DLT usa Spark Structured Streaming para processar dados de forma incremental e em tempo real, seguindo o padrão de camadas de bronze, prata e ouro:
+- **Databricks DLT (Delta Live Tables)**: No Databricks, o Delta Live Tables é utilizado para o processamento contínuo dos dados armazenados. O DLT usa Spark Structured Streaming para processar dados de forma incremental e em tempo real, seguindo o padrão de camadas de bronze, silver e gold:
   - **Camada Bronze**: Armazena os dados brutos ingeridos do Event Hub, no formato original, aplica regras de qualidade de dados para métricas.
-  - **Camada Prata**: Limpa e transforma os dados para remover duplicatas, lidar com valores nulos.
-  - **Camada Ouro**: Dados refinados e prontos para consumo analítico, incluindo agregações, cálculos de métricas, e dados prontos para relatórios.
+  - **Camada Silver**: Limpa e transforma os dados para remover duplicatas, lidar com valores nulos.
+  - **Camada Gold**: Dados refinados e prontos para consumo analítico, incluindo agregações, cálculos de métricas, e dados prontos para relatórios.
 
 ## 4. Visualização e Análise (Power BI)
 
-- **Power BI**: A camada de ouro é conectada ao Power BI para visualização e análise de dados. O Power BI consome os dados preparados para criar dashboards, relatórios, e fornecer insights sobre os pedidos.
+- **Power BI**: A camada gold é conectada ao Power BI para visualização e análise de dados. O Power BI consome os dados preparados para criar dashboards, relatórios, e fornecer insights sobre os pedidos.
 
 ## Alternativa ao DLT (Event-Driven):
 
