@@ -18,18 +18,21 @@ A arquitetura descrita é projetada para capturar, processar e armazenar dados d
 ## 1. Captura de Dados (Ingestão)
 
 - **Fonte de Dados (Source)**: A solução inicia com uma fonte de dados onde os pedidos são gerados. Estes dados são capturados usando eventos de CDC (Change Data Capture) para detectar mudanças, como inserções ou atualizações de pedidos.
-- **CDC**: Uma API é utilizada para publicar os eventos de dados de pedidos diretamente no Azure Event Hub em um **tópico específico**, permitindo que mudanças nos dados sejam rapidamente transmitidas para o sistema de processamento. A publicação no Event Hub pode ocorrer automaticamente quando um pedido é inserido ou atualizado, utilizando triggers de banco de dados ou uma ferramenta de CDC. Caso a fonte de dados tenha suporte nativo para CDC, ele pode ser usado diretamente; caso contrário, uma ferramenta como o Debezium pode ser integrada para capturar essas mudanças.
+- **CDC**: Uma API é utilizada para publicar os eventos de dados de pedidos diretamente no Azure Event Hub em um **tópico específico**, permitindo que mudanças nos dados sejam rapidamente transmitidas para o sistema de processamento. A publicação no Event Hub pode ocorrer automaticamente quando um pedido é inserido ou atualizado, utilizando triggers de banco de dados ou uma ferramenta de CDC. Caso a fonte de dados tenha suporte nativo para CDC, ele pode ser usado diretamente; caso contrário, será necessário integrar uma ferramenta (como o Debezium) para capturar essas mudanças.
 
 ## 2. Processamento de Dados (Event Hub e Storage)
 
 - **Azure Event Hub**: O Event Hub recebe os eventos de pedidos publicados pela API, atuando como um ponto de entrada escalável para ingestão de dados, capaz de lidar com grandes volumes de eventos em tempo real.
-- **Capture Habilitado**: Com a funcionalidade de Capture habilitada, o Event Hub armazena os dados recebidos em intervalos de tempo definidos ou após acumular um determinado volume de dados. Esses dados são escritos em um serviço de armazenamento (Storage), facilitando a persistência e reprocessamento. Os dados são armazenados em um Azure Blob Storage ou Data Lake, em formato Avro por padrão, mas pode ser configurado para outros formatos como Parquet ou JSON, conforme necessário para processamento e análise.
+- **Capture Habilitado**: Com a funcionalidade de Capture habilitada, o Event Hub armazena os dados recebidos em intervalos de tempo definidos ou após acumular um determinado volume de dados. Esses dados são escritos em um serviço de armazenamento (Storage), facilitando a persistência e reprocessamento. Os dados são armazenados em um Azure Blob Storage ou Data Lake, em formato Avro por padrão. **Também temos a opção de remover** a escrita das mensagens no storage e conectar diretamente o Event Hub com o Databricks, dependendo da necessidade do projeto. Neste exemplo, optei por gravar no storage e manter os arquivos brutos dos dados, podendo adicionar uma retenção de 7 dias.
+
+https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-capture-overview
+
 
 ## 3. Processamento e Transformação (Databricks Workspace)
 
 - **Databricks DLT (Delta Live Tables)**: No Databricks, o Delta Live Tables é utilizado para o processamento contínuo dos dados armazenados. O DLT usa Spark Structured Streaming para processar dados de forma incremental e em tempo real, seguindo o padrão de camadas de bronze, prata e ouro:
-  - **Camada Bronze**: Armazena os dados brutos ingeridos do Event Hub, no formato original.
-  - **Camada Prata**: Limpa e transforma os dados para remover duplicatas, lidar com valores nulos, e aplicar regras de qualidade de dados.
+  - **Camada Bronze**: Armazena os dados brutos ingeridos do Event Hub, no formato original, aplica regras de qualidade de dados para métricas.
+  - **Camada Prata**: Limpa e transforma os dados para remover duplicatas, lidar com valores nulos.
   - **Camada Ouro**: Dados refinados e prontos para consumo analítico, incluindo agregações, cálculos de métricas, e dados prontos para relatórios.
 
 ## 4. Visualização e Análise (Power BI)
