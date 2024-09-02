@@ -32,7 +32,7 @@ https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-capture-overview
 
 - **Databricks DLT (Delta Live Tables)**: No Databricks, o Delta Live Tables é utilizado para o processamento contínuo dos dados armazenados. O DLT usa Spark Structured Streaming para processar dados de forma incremental e em tempo real, seguindo o padrão de camadas de bronze, silver e gold. O notebook do repositório possui um código de exemplo de como poderia ser o processamento em streaming utilizando DLT para as camadas bronze e silver.
   - **Camada Bronze**: Armazena os dados brutos ingeridos do Event Hub, no formato original, aplica regras de qualidade de dados para métricas. As linhas que falharem nas validações do DLT estarão flagadas com a coluna is_quarantined = True.
-  - **Camada Silver**: Limpa e transforma os dados para remover duplicatas, lidar com valores nulos.
+  - **Camada Silver**: Limpa e transforma os dados para remover duplicatas, lidar com valores nulos e demais transformações.
   - **Camada Gold**: Dados refinados e prontos para consumo analítico, incluindo agregações, cálculos de métricas, e dados prontos para relatórios.
 
 ## 4. Visualização e Análise (Power BI)
